@@ -1,0 +1,5 @@
+Python Programming Intro
+
+Python is a computer programming language often used to build websites and software, automate tasks, and analyse data. 
+Python is a general-purpose language, not specialised for any specific problems, and used to create various programmes.
+Python's syntax is a lot closer to English and so it is easier to read and write, making it the simplest type of code to learn how to write and develop with.

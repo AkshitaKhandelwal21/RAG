@@ -1,0 +1,27 @@
+Q1. Get all books priced less than 500,Book.objects.filter(price__lt=500)
+Q2. Get all books priced less than or equal to 500,Book.objects.filter(price__lte=500)
+Q3. Get all books priced greater than 1000,Book.objects.filter(price__gt=1000)
+Q4. Get all books with rating greater than or equal to 4.5,Book.objects.filter(rating__gte=4.5)
+"Q5. Get books with title exactly ""Django Basics""","Book.objects.filter(title__exact=""Django Basics"")"
+"Q6. Get books with title ""django basics"" (case-insensitive)","Book.objects.filter(title__iexact=""django basics"")"
+"Q7. Get books whose title contains ""django""","Book.objects.filter(title__contains=""django)"
+"Q8. Get all books written by an author named ""Rahul""","Book.objects.filter(author__name=""Rahul"")"
+Q9. Get books written by authors older than 40,Book.objects.filter(author__age__gt=40)
+"Q10. Get books published by publishers from ""India""","Book.objects.filter(publisher__country__iexact=""india"")"
+Q11. Get all books of a specific author (author id = 1),"# Book.objects.filter(author__id=1)
+author = Author.objects.get(id=1)
+author.books.all()"
+Q12. Get authors who have written at least one book,"# Author.objects.filter(books__isNull=False)
+Author.objects.filter(books__isnull=False).distinct()"
+Q13. Get only titles and prices of all books,"# Book.objects.filter(values_list=['title', 'price'])
+Book.objects.values('title', 'price')"
+Q14. Get a list of all book titles,Book.objects.values_list('title')
+Q15. Get author names with book titles,"Book.objects.values('author__name', 'title')"
+Q16. Count number of books written by each author,"# Book.objects.filter(author__name).values('title)
+Author.objects.annotate(book_count=Count('books'))"
+Q17. Get authors with more than 2 books,Author.objects.annotate(book_count=Count('books').filter(book_count__gt=2)
+Q18. Get average book rating per author,Author.objects.annotate(avg_rating=Avg('books__rating')
+Q19. Get publisher-wise maximum book price,Publisher.objects.annotate(max_price=Max('books__price'))
+Q26. Get authors whose average book rating > 4,Author.objects.annotate(avg_rating=Avg('books__rating').filter(avg_rating__gt=4)
+Q27. Get top 3 most expensive books,Book.objects.order_by('-price')[:3]
+Q28. Check if any book exists with price > 5000,Book.objects.filter(price__gt=5000).exists()

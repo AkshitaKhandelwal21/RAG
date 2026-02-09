@@ -1,0 +1,14 @@
+Machine Learning Intro
+
+Machine learning (ML) is a subset of artificial intelligence (AI) and computer science that focuses on using data and algorithms to enable AI systems to learn, improve, and make predictions without being explicitly programmed. 
+It involves training models to identify patterns in data to perform tasks like classification, regression, or generation. 
+
+Key Aspects of Machine Learning:
+
+Types of ML: The four most common types are supervised learning (using labeled data), unsupervised learning (finding patterns in unlabeled data), semi-supervised learning, and reinforcement learning (trial-and-error).
+
+How it Works: ML algorithms analyze large amounts of data to create a model, which then makes decisions or predictions.
+
+Common Applications: Used for object detection, anomaly detection, recommendation systems (e.g., Netflix, Amazon), natural language processing, and chatbots.
+
+Algorithms: Popular techniques include neural networks, decision trees, and random forests. 
