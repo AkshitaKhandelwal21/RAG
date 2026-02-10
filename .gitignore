@@ -208,3 +208,5 @@ __marimo__/
 
 
 .python-version
+
+data/vector_store
